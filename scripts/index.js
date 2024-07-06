@@ -49,18 +49,14 @@ const updateWeather = (data) => {
     "current-icon"
   ).src = `http://openweathermap.org/img/wn/${current.weather[0].icon}@2x.png`;
 
-  const first = data.list[1];
+  const first = data.list[1 * 8 - 1];
   document.getElementById("date").innerHTML = new Date(
     first.dt * 1000
   ).toDateString();
   document.getElementById("temp").textContent = `${first.main.temp}°C`;
   document.getElementById("humidity").innerHTML = `${first.main.humidity}%`;
   document.getElementById("wind-speed").innerHTML = `${first.wind.speed} km/h`;
-  document.getElementById(
-    "icon"
-  ).src = `http://openweathermap.org/img/wn/${first.weather[1].icon}@2x.png`;
-
-  const second = data.list[2];
+  const second = data.list[2 * 8 - 1];
   document.getElementById("date1").innerHTML = new Date(
     second.dt * 1000
   ).toDateString();
@@ -69,22 +65,16 @@ const updateWeather = (data) => {
   document.getElementById(
     "wind-speed1"
   ).innerHTML = `${second.wind.speed} km/h`;
-  document.getElementById(
-    "icon1"
-  ).src = `http://openweathermap.org/img/wn/${second.weather[2].icon}@2x.png`;
 
-  const third = data.list[3];
+  const third = data.list[3 * 8 - 1];
   document.getElementById("date2").innerHTML = new Date(
     third.dt * 1000
   ).toDateString();
   document.getElementById("temp2").textContent = `${third.main.temp}°C`;
   document.getElementById("humidity2").innerHTML = `${third.main.humidity}%`;
   document.getElementById("wind-speed2").innerHTML = `${third.wind.speed} km/h`;
-  document.getElementById(
-    "icon2"
-  ).src = `http://openweathermap.org/img/wn/${third.weather[3].icon}@2x.png`;
 
-  const fourth = data.list[4];
+  const fourth = data.list[4 * 8 - 1];
   document.getElementById("date3").innerHTML = new Date(
     fourth.dt * 1000
   ).toDateString();
@@ -93,18 +83,12 @@ const updateWeather = (data) => {
   document.getElementById(
     "wind-speed3"
   ).innerHTML = `${fourth.wind.speed} km/h`;
-  document.getElementById(
-    "icon3"
-  ).src = `http://openweathermap.org/img/wn/${fourth.weather[4].icon}@2x.png`;
 
-  const fifth = data.list[5];
+  const fifth = data.list[5 * 8 - 1];
   document.getElementById("date4").innerHTML = new Date(
     fifth.dt * 1000
   ).toDateString();
   document.getElementById("temp4").textContent = `${fifth.main.temp}°C`;
   document.getElementById("humidity4").innerHTML = `${fifth.main.humidity}%`;
   document.getElementById("wind-speed4").innerHTML = `${fifth.wind.speed} km/h`;
-  document.getElementById(
-    "icon4"
-  ).src = `http://openweathermap.org/img/wn/${fifth.weather[5].icon}@2x.png`;
 };
