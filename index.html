@@ -8,29 +8,25 @@
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <script
       src="node_modules/bootstrap/dist/js/bootstrap.min.js"
-      defer
-    ></script>
+      defer></script>
   </head>
-  <body>
+  <body class="bg-success">
     <nav class="navbar navbar-expand-lg bg-dark d-flex justify-content-center">
       <a class="navbar-brand text-primary fs-4" href="#">WEATHER FORECAST</a>
     </nav>
     <div
-      class="d-flex flex-column justify-content-center align-items-center m-2"
-    >
+      class="d-flex flex-column justify-content-center align-items-center m-2">
       <input type="text" placeholder="search for city" class="col-7 mb-2 p-2" />
       <button type="button" class="btn btn-success col-8">search</button>
     </div>
     <div
-      class="d-flex flex-column justify-content-center align-items-center m-4 hideCurrent"
-    >
+      class="d-flex flex-column justify-content-center align-items-center m-4 hideCurrent">
       <div class="card bg-dark text-light" style="width: 300px">
         <div class="card-body">
-          <div class="card-title"><h2>city :</h2></div>
+          <div class="card-title"><h2 id="city">city :</h2></div>
           <h5>Date : <span id="current-date"></span></h5>
           <h5>Temp : <span id="current-temp"></span></h5>
           <h5>Humidity : <span id="current-humidity"></span></h5>

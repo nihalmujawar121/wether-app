@@ -33,6 +33,7 @@ const weather = async (city) => {
 
 const updateWeather = (data) => {
   const current = data.list[0];
+  document.getElementById("city").innerHTML = `${input.value}`;
   document.getElementById("current-date").innerHTML = new Date(
     current.dt * 1000
   ).toDateString();
